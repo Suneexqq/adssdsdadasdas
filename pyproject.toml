@@ -1,0 +1,16 @@
+[project]
+name = "python-template"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+requires-python = ">=3.11"
+dependencies = [
+    "aiogram>=3.15.0",
+    "aiosqlite>=0.20.0",
+    "apscheduler>=3.11.0",
+    "cherrypy>=18.10.0",
+    "mysql-connector-python>=9.1.0",
+    "pytelegrambotapi>=4.24.0",
+    "pytz>=2024.2",
+    "requests>=2.32.3",
+]

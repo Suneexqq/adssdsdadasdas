@@ -1,0 +1,43 @@
+Updates were skipped successfully.
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+INFO:apscheduler.scheduler:Added job "perform_lottery_draw" to job store "default"
+INFO:apscheduler.scheduler:Added job "reset_daily_clicks_job" to job store "default"
+INFO:apscheduler.scheduler:Scheduler started
+INFO:aiogram:Bot: admbot [@vampubsupportbot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:apscheduler.executors.default:Running job "reset_daily_clicks_job (trigger: cron[hour='0', minute='0'], next run at: 2024-11-23 00:00:00 UTC)" (scheduled at 2024-11-22 00:00:00+00:00)
+INFO:apscheduler.executors.default:Job "reset_daily_clicks_job (trigger: cron[hour='0', minute='0'], next run at: 2024-11-23 00:00:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "perform_lottery_draw (trigger: cron[hour='0', minute='0'], next run at: 2024-11-23 00:00:00 UTC)" (scheduled at 2024-11-22 00:00:00+00:00)
+INFO:apscheduler.executors.default:Job "perform_lottery_draw (trigger: cron[hour='0', minute='0'], next run at: 2024-11-23 00:00:00 UTC)" executed successfully
+ERROR:aiogram.dispatcher.dispatcher:Cause exception while getting updates.
+Traceback (most recent call last):
+  File "/home/pslgod/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+  File "/home/pslgod/.local/lib/python3.10/site-packages/aiogram/bot/bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/home/pslgod/.local/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/pslgod/.local/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/pslgod/.local/lib/python3.10/site-packages/aiogram/bot/api.py", line 111, in check_result
+    raise exceptions.RetryAfter(parameters.retry_after)
+aiogram.utils.exceptions.RetryAfter: Flood control exceeded. Retry in 5 seconds.
+ERROR:aiogram.dispatcher.dispatcher:Cause exception while getting updates.
+Traceback (most recent call last):
+  File "/home/pslgod/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+  File "/home/pslgod/.local/lib/python3.10/site-packages/aiogram/bot/bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/home/pslgod/.local/lib/python3.10/site-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/home/pslgod/.local/lib/python3.10/site-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/home/pslgod/.local/lib/python3.10/site-packages/aiogram/bot/api.py", line 128, in check_result
+    raise exceptions.TelegramAPIError(description)
+aiogram.utils.exceptions.TelegramAPIError: Bad Gateway
+INFO:apscheduler.executors.default:Running job "reset_daily_clicks_job (trigger: cron[hour='0', minute='0'], next run at: 2024-11-24 00:00:00 UTC)" (scheduled at 2024-11-23 00:00:00+00:00)
+INFO:apscheduler.executors.default:Job "reset_daily_clicks_job (trigger: cron[hour='0', minute='0'], next run at: 2024-11-24 00:00:00 UTC)" executed successfully
+INFO:apscheduler.executors.default:Running job "perform_lottery_draw (trigger: cron[hour='0', minute='0'], next run at: 2024-11-24 00:00:00 UTC)" (scheduled at 2024-11-23 00:00:00+00:00)
+INFO:apscheduler.executors.default:Job "perform_lottery_draw (trigger: cron[hour='0', minute='0'], next run at: 2024-11-24 00:00:00 UTC)" executed successfully
